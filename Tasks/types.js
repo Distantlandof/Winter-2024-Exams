@@ -2,19 +2,17 @@
 
 'use strict';
 
-const types_ = function (s) {
-  types_ = {
+const coutypes = function (array) {
+const typesinar = {
     number: 0,
     string: 0,
     boolean: 0,
   };
-  for (const  i of s) {
-    const t = typeof i;
-    types_[t]++;
+  for (const  key of array) {
+    const type = typeof key;
+    typesinar[type]++;
   }
-  s.push('string');
-  return types_;
-  s.length;
+  return typesinar ;
 };
 
-module.exports = types_;
+module.exports = coutypes ;
