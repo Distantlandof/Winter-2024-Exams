@@ -3,14 +3,14 @@
 'use strict'; 
 
 const Filter = (array, type) => {
-  const remove = [];
+  const res = [];
   
  for (const value of Object.values(array)) {
     if (typeof value === type) {
-      remove.push(value);
+      res.push(value);
     }
   }
-  return remove;
+  return res;
 };
 
 module.exports = Filter;
