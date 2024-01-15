@@ -5,13 +5,12 @@
 const Filter = (array, type) => {
   const remove = [];
   
- for (const [key, value] of Object.entries(array)) {
-    if (typeof value !== type) {
-      remove.unshift(key);
+ for (const value of Object.values(array)) {
+    if (typeof value === type) {
+      remove.push(value);
     }
   }
- for (const x of remove) array.splice(x, 1);
-  return array;
+  return remove;
 };
 
 module.exports = Filter;
