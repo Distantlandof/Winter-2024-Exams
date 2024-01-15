@@ -3,18 +3,16 @@
 'use strict';
 
 const getvaluebetween = (str, pref, suf) => {
- let in = str.indexOf(pref);
-  if (in === -1) return "";
-   in = in + pref.length;
-    str = str.substring(in);
-    if (suf) {
-      in = str.indexOf(suf);
+ let subt
+ const Pos = str.indexOf(prefix) + 1;
+  const finishPos = str.indexOf(suffix);
+  if (startPos === -1 || finishPos === -1) {
       if (in === -1) {
         return "";
-        str = str.substring(0, in);
+       subt = str.substring(0, in);
     }
   }
-  return str;
+  return subt;
 }; 
 
 module.exports = getvaluebetween;
