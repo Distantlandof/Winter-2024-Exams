@@ -4,10 +4,10 @@
 
 const Filter = (array, type) => {
   const remove = [];
-  for (const C of array) {
-    const x = array.indexOf(C);
-    if (typeof array[x] !== type) {
-      remove.unshift(x);
+  
+ for (const [key, value] of Object.entries(array)) {
+    if (typeof value !== type) {
+      remove.unshift(key);
     }
   }
  for (const x of remove) array.splice(x, 1);
