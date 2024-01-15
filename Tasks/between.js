@@ -1,15 +1,15 @@
 // Extract substring between prefix and suffix
 
-const getvaluebetween = (str, p, s) => {
- let i = str.indexOf(p);
-  if (i === -1) return "";
-   const k = i + p.length;
-    str = str.substring(k);
-    if (s) {
-      i = str.indexOf(s);
-      if (i === -1) {
+const getvaluebetween = (str, pref, suf) => {
+ let in = str.indexOf(pref);
+  if (in === -1) return "";
+   in = in + pref.length;
+    str = str.substring(in);
+    if (suf) {
+      in = str.indexOf(suf);
+      if (in === -1) {
         return "";
-        str = str.substring(0, i);
+        str = str.substring(0, in);
     }
   }
   return str;
