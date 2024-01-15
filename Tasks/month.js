@@ -1,26 +1,16 @@
 // Get month number
 
-Months = [
-  'jan',
-  'feb',
-  'mar',
-  'apr',
-  'may',
-  'jun',
-  'jul',
-  'aug',
-  'sep',
-  'oct',
-  'nov',
-  'dec',
-];
-
-Month = (s) => {
-  l = Months.length;
+const getMonth = (input) => {
+  const months = [
+    'jan', 'feb', 'mar', 'apr', 'may', 'jun',
+    'jul', 'aug', 'sep', 'oct', 'nov', 'dec'
+  ];
+getMonth = (s) => {
+  l = getMonth.length;
   for (let i = 0; i < l; i++) {
-    if (s.toLowerCase().startsWith(Months[i])) return i + 1;
+    if (s.toLowerCase().startsWith(getMonth[i])) return i + 1;
   }
   return -1;
 };
 
-module.exports = Month;
+module.exports = getMonth;
